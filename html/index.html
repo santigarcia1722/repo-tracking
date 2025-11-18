@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SGM TRACKING</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>SGM TRACKING</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- RASTREAR ENVÍO -->
+    <h2>Rastrear un envío</h2>
+    <div class="input-group">
+      <label for="trackingId">Código de seguimiento</label>
+      <input type="text" id="trackingId" placeholder="Ej: SGM123456">
+    </div>
+    <button onclick="rastrearEnvio()">Rastrear</button>
+    <div class="result" id="resultadoTracking"></div>
+
+
+    <!-- ENVIAR PAQUETE -->
+    <h2>Enviar un paquete</h2>
+    <div class="input-group">
+      <label>Dirección del destinatario</label>
+      <input type="text" id="direccion" placeholder="Calle Coderhouse">
+    </div>
+
+    <div class="input-group">
+      <label>Nombre del Receptor</label>
+      <input type="text" id="nombre" placeholder="Lionel Messi">
+    </div>
+
+    <div class="input-group">
+      <label>Peso (kg)</label>
+      <input type="number" id="peso" placeholder="Ej: 88225">
+    </div>
+
+    <button onclick="enviarPaquete()">Crear envío</button>
+    <div class="result" id="resultadoEnvio"></div>
+
+
+    <!-- CALCULAR COSTO -->
+    <h2>Calcular costo de envío</h2>
+    <div class="input-group">
+      <label>Peso (kg)</label>
+      <input type="number" id="pesoCosto">
+    </div>
+
+    <div class="input-group">
+      <label>Destino</label>
+      <select id="destinoCosto">
+        <option value="Montevideo">Montevideo</option>
+        <option value="Interior">Interior del país</option>
+      </select>
+    </div>
+
+    <button onclick="calcularCosto()">Calcular</button>
+    <div class="result" id="resultadoCosto"></div>
+
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
